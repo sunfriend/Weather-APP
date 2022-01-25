@@ -13,7 +13,8 @@ const Animate = (() => {
             {rain: variables.rainyDay, sun: false},
             {snow: variables.snowyDay, sun: false},
             {mist: variables.mistyDay, sun: false},
-            {fog: variables.foggyDay, sun: false}
+            {fog: variables.foggyDay, sun: false},
+            {haze: variables.foggyDay, sun: false}
         ];
 
         clearElements(container);
@@ -43,7 +44,7 @@ const Animate = (() => {
     }
 
     function regexWeather(type) {
-        const typeReg = /(clear|cloud|rain|thunderstorm|snow|mist|fog)/gi;
+        const typeReg = /(clear|cloud|rain|thunderstorm|snow|mist|fog|haze)/gi;
         return type.match(typeReg).toString();
     }
 
